@@ -1,0 +1,26 @@
+﻿{
+	"dbName": "codex_db",
+	"dbConfig": {
+		"server": "localhost",
+		"options": {
+			"port": 1433,
+			"trustServerCertificate": true
+		},
+		"authentication": {
+			"type": "default",
+			"options": {
+				"userName": "Shapiro123",
+				"password": "ShapRacers@123"
+			}
+		}
+	},
+	"auth0Config": {
+		"AUTH0_SECRET": "ffa0321a14bbc590836f17c38dabde5ddc8d8e2af0f6c3f750bf9cd36a61bce2",
+		"AUTH0_BASE_URL": "http://localhost:3000",
+		"AUTH0_ISSUER_BASE_URL": "https://dev-d1ei-1fj.us.auth0.com",
+		"AUTH0_CLIENT_ID": "XbpmKI2TwH99h5sRaQKzTjGFRPpmSc6V",
+		"AUTH0_CLIENT_SECRET": "G4BdB0xLi1N7Fun73R_ZwgnzRgBolQzlWj_APQTkbqquQb26l9L2UHTaj5nhppQr",
+		"AUTH0_DOMAIN": "dev-d1ei-1fj.us.auth0.com",
+		"AUTH0_AUDIENCE": "https://dev-d1ei-1fj.us.auth0.com/api/v2/"
+	}
+}
