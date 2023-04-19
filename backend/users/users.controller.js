@@ -49,43 +49,82 @@ function _delete(req, res, next) {
 }
 
 // schema functions
-
 function createSchema(req, res, next) {
+
     const schema = Joi.object({
+
         title: Joi.string(),
+
         firstName: Joi.string(),
+
         lastName: Joi.string(),
+
         role: Joi.string().valid(Role.Admin, Role.User),
+
         email: Joi.string().email().required(),
+
         password: Joi.string().min(6).required(),
+
         confirmPassword: Joi.string().valid(Joi.ref('password')).required(),
+
         userId: Joi.string(),
+
         userLogin: Joi.string(),
+
         custNoAllowed: Joi.string(),
+
         chargeCustAllowed: Joi.string(),
+
         programsToAccess: Joi.string(),
+
         pomRoles: Joi.string(),
-        auth0Id: Joi.string()
+
+        auth0Id: Joi.string(),
+
+        username: Joi.string()
+
     });
+
     validateRequest(req, next, schema);
+
 }
 
 function updateSchema(req, res, next) {
+
     const schema = Joi.object({
+
         title: Joi.string().empty(''),
+
         firstName: Joi.string().empty(''),
+
         lastName: Joi.string().empty(''),
+
         role: Joi.string().valid(Role.Admin, Role.User).empty(''),
+
         email: Joi.string().email().empty(''),
+
         password: Joi.string().min(6).empty(''),
+
         confirmPassword: Joi.string().valid(Joi.ref('password')).empty(''),
+
         userId: Joi.string(),
+
         userLogin: Joi.string(),
+
         custNoAllowed: Joi.string(),
+
         chargeCustAllowed: Joi.string(),
+
         programsToAccess: Joi.string(),
+
         pomRoles: Joi.string(),
-        auth0Id: Joi.string()
+
+        auth0Id: Joi.string(),
+
+        username: Joi.string()
+
     }).with('password', 'confirmPassword');
+
     validateRequest(req, next, schema);
+
 }

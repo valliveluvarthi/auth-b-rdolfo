@@ -9,8 +9,8 @@
 		"authentication": {
 			"type": "default",
 			"options": {
-				"userName": "Shapiro123",
-				"password": "ShapRacers@123"
+				"userName": "Shapiro",
+				"password": "Shapiro123"
 			}
 		}
 	},

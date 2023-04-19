@@ -17,6 +17,7 @@ function model(sequelize) {
         programsToAccess: { type: DataTypes.STRING, allowNull: true },
         pomRoles: { type: DataTypes.STRING, allowNull: true },
         auth0Id: { type: DataTypes.STRING, allowNull: true },
+        username: { type: DataTypes.STRING, allowNull: true },
     };
 
     const options = {
